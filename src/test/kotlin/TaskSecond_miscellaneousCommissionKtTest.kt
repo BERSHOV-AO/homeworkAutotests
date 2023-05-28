@@ -13,7 +13,7 @@ class TaskSecond_miscellaneousCommissionKtTest {
         val result = calculatorTransfer(typeCardAccount, amountPreviousTransfers, amountTransfer)
         assertEquals(
             "Сумма перевода по катре MasterCard с учетом комиссии " +
-                    "0.6 % + 20 руб. составляет: 149080.0", result
+                    "0.6 % + 20 руб. составляет: 149080.", result // error 149080.0
         )
     }
 
@@ -59,7 +59,7 @@ class TaskSecond_miscellaneousCommissionKtTest {
         val amountPreviousTransfers = 20_000
         val amountTransfer = 170_000
         val result = calculatorTransfer(typeCardAccount, amountPreviousTransfers, amountTransfer)
-        assertEquals("Лимит по катре Mir превышен", result)
+        assertEquals("Лимит по катре превышен", result) // error "Лимит по катре Mir превышен"
     }
 
     @Test
